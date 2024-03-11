@@ -189,42 +189,47 @@
     </div>
   </div>
 
-  <!-- ------------------------------------------------>
-  <div class="row hw12">
-    <div class="col-md-12 twenty">
-      <table>
-        <tr>
-          <th>總分</th>
-          <th>完成後打勾</th>
-          <th>配分</th>
-          <th>分項描述</th>
-        </tr>
-        <tr>
-          <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
-        </tr>
-      </table>
-    </div>
+<!-- ------------------------------------------------>
+<div class="row hw12">
+  <div class="col-md-12 twenty">
+    <table>
+      <tr>
+        <th>總分</th>
+        <th>完成後打勾</th>
+        <th>配分</th>
+        <th>分項描述</th>
+      </tr>
+      <tr>
+        <td rowspan="7" id="myTotal"></td>
+        <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+        <td id='m1'>1</td>
+        <td>Simple baseline - 專案下載 </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
+        <td id='m2'>2</td>
+        <td>Simple baseline - 安裝虛擬環境 </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+        <td id='m3'>3</td>
+        <td>Medium baseline - 旋轉校正手寫稿紙 </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
+        <td id='m4'>4</td>
+        <td>Strong baseline - 成功執行切割程式並取得檔案 </td>
+      </tr>
+    </table>
   </div>
+</div>
+
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <img src="./Simple/專案下載.jpg" width="1200px" height="600px"/><br> 
+      <img src="./Simple/環境.jpg" width="1200px" height="600px"/>
     </div>
   </div>
 
@@ -267,8 +272,13 @@
       score += parseInt(d3.select('#m3').html());   
     }
 
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
+
     d3.select("#myTotal").html(score);    
   }
+
 </script>
 
 </body>
