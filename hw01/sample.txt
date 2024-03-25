@@ -1,2 +1,2 @@
 -> => == === != =/= <= >= <=> 
-Sleeper AllReserved GreenReserved LimitedSleeper
+Sleeper AllReserved GreenReserved
