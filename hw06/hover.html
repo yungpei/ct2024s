@@ -36,11 +36,11 @@
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // 加载CSV数据
-        d3.csv("src/upload_csv/hsieh.csv").then(function(data) {
+        d3.csv("src/upload_csv/wu.csv").then(function(data) {
 
             // 设置X轴比例尺
             var x = d3.scaleLinear()
-                .domain([0.45, 0.65]) // ssim
+                .domain([0.66, 0.80]) // ssim
                 .range([ 0, width ]);
             svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
@@ -77,7 +77,7 @@
                 .text("LPIPS");
 
             var filteredData = data.filter(function(d) {
-                return d.SSIM >= 0.45 && d.SSIM <= 0.65 && d.LPIPS >= 0.35 && d.LPIPS <= 0.60;
+                return d.SSIM >= 0.66 && d.SSIM <= 0.80 && d.LPIPS >= 0.29 && d.LPIPS <= 0.60;
             });
 
             // 创建散点
@@ -102,7 +102,7 @@
                     tooltip.transition()
                         .duration(200)
                         .style("opacity", .9);
-                    tooltip.html("<img src='src/hsieh/" + d.Student + "' alt='Handwriting' width='120' height='120'>")
+                    tooltip.html("<img src='src/wu/" + d.Student + "' alt='Handwriting' width='120' height='120'>")
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
                 })
