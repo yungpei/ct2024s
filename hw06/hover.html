@@ -59,7 +59,7 @@
 
             // 设置Y轴比例尺
             var y = d3.scaleLinear()
-                .domain([0.29, 0.60]) // lpips
+                .domain([0.28, 0.50]) // lpips
                 .range([ height, 0]);
             svg.append("g")
                 .call(d3.axisLeft(y));
@@ -77,7 +77,7 @@
                 .text("LPIPS");
 
             var filteredData = data.filter(function(d) {
-                return d.SSIM >= 0.66 && d.SSIM <= 0.80 && d.LPIPS >= 0.29 && d.LPIPS <= 0.60;
+                return d.SSIM >= 0.66 && d.SSIM <= 0.80 && d.LPIPS >= 0.28 && d.LPIPS <= 0.50;
             });
 
             // 创建散点
